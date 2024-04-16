@@ -55,7 +55,7 @@ export default function LoginPage() {
 
     localStorage.setItem('token', token);
     // if (localStorage.getItem('token')) {
-      router.push("/");
+      router.push("/home");
     // }
 
 

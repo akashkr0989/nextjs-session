@@ -19,9 +19,7 @@ const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
     }
   }, [router]);
 
-  // Optional: You can add a loading state while checking authentication.
   if (!isToken) {
-    // Optionally, show a loading indicator or handle the initial render differently
     return <div>Loading...</div>;
   }
 

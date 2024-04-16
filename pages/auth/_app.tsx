@@ -8,7 +8,7 @@ import { AppProps } from "next/app";
 import theme from "@/styles/theme";
 import Header from "@/shared/components/header";
 import { useEffect, useState } from "react";
-import HomePage from "../[home]";
+import HomePage from "../home";
 // import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"] });
