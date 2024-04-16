@@ -31,9 +31,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Header />
         <Container maxWidth="xl" style={{ paddingTop: 64, paddingBottom: 20 }}>
 
-          {/* <AuthGuard> */}
+          <AuthGuard>
           <Component {...pageProps} />
-          {/* </AuthGuard> */}
+          </AuthGuard>
           
         </Container>
       </ThemeProvider>

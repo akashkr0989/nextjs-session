@@ -14,14 +14,15 @@ const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
     const token = localStorage.getItem("token");
     if (token) {
       setTokenStatus(true);
+      router.replace("/home");
     } else {
       router.replace("/auth/login");
     }
   }, [router]);
 
-  if (!isToken) {
-    return <div>Loading...</div>;
-  }
+  // if (!isToken) {
+  //   return <div>Loading...</div>;
+  // }
 
   return <>{children}</>;
 };
