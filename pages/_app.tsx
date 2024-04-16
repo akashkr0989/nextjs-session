@@ -22,21 +22,22 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* <SessionProvider session={session}> */}
+
       <ThemeProvider theme={theme}>
         <Head>
           <title>{`${metadata.title}`}</title>
           <meta name="description" content={metadata.description || "N/A"} />
         </Head>
         <Header />
-        <Container
-          maxWidth="lg" //   style={{ padding: "0 0", overflowX: "hidden" }}
-          style={{ paddingTop: 64, paddingBottom: 20 }}
-        >
-          <AuthGuard>
-            <Component {...pageProps} />
-          </AuthGuard>
+        <Container maxWidth="xl" style={{ paddingTop: 64, paddingBottom: 20 }}>
+
+          {/* <AuthGuard> */}
+          <Component {...pageProps} />
+          {/* </AuthGuard> */}
+          
         </Container>
       </ThemeProvider>
+
       {/* </SessionProvider> */}
     </>
   );

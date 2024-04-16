@@ -1,0 +1,115 @@
+.videoContainer {
+  flex-wrap: wrap;
+  height: calc(100vh - 110px);
+  position: relative;
+}
+
+.closePlayer {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+  padding: 20px;
+  margin: 25px;
+  top: 2rem;
+  cursor: pointer;
+  .closeButton {
+    font-size: 3rem;
+  }
+}
+
+.bannerContainer {
+  position: relative;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  background-size: cover;
+  background-position: center center;
+
+  .descriptionBox {
+    width: 35rem;
+    height: 14rem;
+    position: absolute;
+    bottom: 8rem;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+  .description {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .bannerButton {
+    margin: 0 10px;
+  }
+}
+
+.bannerContainer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  pointer-events: none;
+}
+
+.bannerDetails {
+  margin: 50px;
+  position: absolute;
+  bottom: 0;
+  max-width: 700px;
+  h1 {
+    font-weight: 1000;
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .videoInfo {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: grey;
+  }
+  .category {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .playContainer {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    .play {
+      display: flex;
+      gap: 1rem;
+    }
+    .play_button {
+      font-size: 5rem;
+      cursor: pointer;
+    }
+    .buttonsContainer {
+      gap: 1.3rem;
+      display: flex;
+      .buttonList {
+        cursor: pointer;
+        gap: 2rem;
+        border-radius: 50px;
+        background-color: hsla(0, 0%, 100%, 0.2);
+        font-size: 4rem;
+        padding: 13px;
+      }
+    }
+  }
+}

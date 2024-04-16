@@ -6,8 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import styles from "./cardsList.module.scss";
 import { useRouter } from "next/navigation";
-import { CardsContext } from "@/pages/home";
-import { ThemeConfigContext } from "@/pages/_app";
 
 interface CardProps {
   item: any;
@@ -18,10 +16,6 @@ const CardsListing: React.FC<CardProps> = ({ item }) => {
   const [isHover, setIsHover] = useState(false);
   const [imageSrc, setImageSrc] = useState(item.thumbnail);
 
-  const themeSettings = useContext(ThemeConfigContext);
-
-  const videoPlayList = useContext(CardsContext);
-
   const defaultImage = "/placeholder.png";
 
   const toDetailPage = () => {
@@ -31,12 +25,6 @@ const CardsListing: React.FC<CardProps> = ({ item }) => {
   const handleImageError = () => {
     setImageSrc(defaultImage);
   };
-
-  useEffect(() => {
-    if (themeSettings?.color?.tertiary) {
-      document.documentElement.style.setProperty('--hover-color', themeSettings.color.tertiary);
-    }
-  }, [themeSettings]);
 
   return (
     <>
